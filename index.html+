@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jin kolektif</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #111111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrap {
+      width: min(1500px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    header a {
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin-bottom: 80px;
+    }
+
+    .intro h1 {
+      font-size: clamp(42px, 7vw, 110px);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      margin: 0 0 35px;
+      font-weight: 600;
+    }
+
+    .intro p {
+      font-size: 18px;
+      line-height: 1.45;
+      max-width: 650px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .project {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #eee;
+      cursor: pointer;
+    }
+
+    .project video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .project:hover video {
+      transform: scale(1.02);
+    }
+
+    .caption {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      font-size: 15px;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      text-shadow: 0 1px 12px rgba(0,0,0,.5);
+    }
+
+    .project:hover .caption {
+      opacity: 1;
+    }
+
+    footer {
+      padding: 90px 0 50px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #111;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-bottom: 45px;
+      }
+
+      .intro {
+        margin-bottom: 45px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="logo">JIN</div>
+      <a href="mailto:hello@jinkolektif.com">CONTACT</a>
+    </header>
+
+    <section class="intro">
+      <h1>Music & sound<br>for moving images.</h1>
+
+      <p>
+        JIN is an independent music and sound collective.
+        We make original music, jingles, sonic identities
+        and sound for commercials and moving images.
+      </p>
+    </section>
+
+    <section class="grid">
+
+      <div class="project">
+        <video autoplay muted loop playsinline>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <div class="caption">PROJECT 01</div>
+      </div>
+
+      <div class="project">
+        <video autoplay muted loop playsinline>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="caption">PROJECT 02</div>
+      </div>
+
+      <div class="project">
+        <video autoplay muted loop playsinline>
+          <source src="video3.mp4" type="video/mp4">
+        </video>
+        <div class="caption">PROJECT 03</div>
+      </div>
+
+      <div class="project">
+        <video autoplay muted loop playsinline>
+          <source src="video4.mp4" type="video/mp4">
+        </video>
+        <div class="caption">PROJECT 04</div>
+      </div>
+
+    </section>
+
+    <footer>
+      <div>JIN KOLEKTIF</div>
+
+      <div>
+        <a href="mailto:hello@jinkolektif.com">EMAIL</a>
+        &nbsp;&nbsp;
+        <a href="#" target="_blank">INSTAGRAM</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
